@@ -41,7 +41,7 @@ class WeatherDetailsViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .handleEvents(receiveSubscription: { [weak self] _ in
                 guard let self = self else { return }
-                self.state = self.state.copy(isLoading: true)
+                self.state = self.state.copy(isLoading: true, error: .no)
             }, receiveCancel: { [weak self] in
                 guard let self = self else { return }
                 self.state = self.state.copy(isLoading: true)
@@ -49,7 +49,7 @@ class WeatherDetailsViewModel: ObservableObject {
                 guard let self = self else { return }
                 switch completion {
                 case let .failure(error):
-                    self.state = self.state.copy(isLoading: false, error: error)
+                    self.state = self.state.copy(isLoading: false, error: .error(error))
                 case .finished:
                     self.state = self.state.copy(isLoading: false)
                 }

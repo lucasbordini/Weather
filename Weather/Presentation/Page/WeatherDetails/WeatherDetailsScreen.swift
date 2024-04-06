@@ -14,6 +14,9 @@ struct WeatherDetailsScreen: View {
     
     var body: some View {
         VStack(alignment: .center) {
+            if case let .error(failure) = state.error {
+                ErrorView(failure: failure)
+            }
             let vo = state.vo
             WeatherDetailsHeaderView(city: vo?.city ?? "",
                                      weather: vo?.weather ?? "",

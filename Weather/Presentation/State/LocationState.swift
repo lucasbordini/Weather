@@ -13,12 +13,12 @@ extension LocationViewModel {
         let isLoading: Bool
         let foundCities: [Location]
         let isEmptySearch: Bool
-        let error: NetworkError?
+        let error: NetworkErrorVO
         
         init(isLoading: Bool = false,
              isEmptySearch: Bool = false,
              foundCities: [Location] = [],
-             error: NetworkError? = nil) {
+             error: NetworkErrorVO = .no) {
             self.isLoading = isLoading
             self.foundCities = foundCities
             self.error = error
@@ -28,7 +28,7 @@ extension LocationViewModel {
         func copy(isLoading: Bool? = nil,
                   foundCities: [Location]? = nil,
                   isEmptySearch: Bool? = nil,
-                  error: NetworkError? = nil
+                  error: NetworkErrorVO? = nil
         ) -> Self {
             return Self(isLoading: isLoading ?? self.isLoading,
                         isEmptySearch: isEmptySearch ?? self.isEmptySearch,

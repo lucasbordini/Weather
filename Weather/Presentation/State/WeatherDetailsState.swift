@@ -13,12 +13,12 @@ extension WeatherDetailsViewModel {
         public let isLoading: Bool
         public let vo: WeatherDetailsVO?
         public let unit: Unit
-        public let error: NetworkError?
+        public let error: NetworkErrorVO
         
         init(isLoading: Bool = true,
              vo: WeatherDetailsVO? = nil,
              unit: Unit = .imperial,
-             error: NetworkError? = nil) {
+             error: NetworkErrorVO = .no) {
             self.isLoading = isLoading
             self.vo = vo
             self.unit = unit
@@ -28,7 +28,7 @@ extension WeatherDetailsViewModel {
         func copy(isLoading: Bool? = nil,
             vo: WeatherDetailsVO? = nil,
                   unit: Unit? = nil,
-            error: NetworkError? = nil
+            error: NetworkErrorVO? = nil
         ) -> Self {
             return Self(isLoading: isLoading ?? self.isLoading,
                         vo: vo ?? self.vo,

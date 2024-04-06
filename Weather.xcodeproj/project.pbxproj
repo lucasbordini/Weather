@@ -60,6 +60,8 @@
 		A054D7C42BC20934006A0646 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D7C32BC20934006A0646 /* LocationSearchView.swift */; };
 		A054D7C62BC2097C006A0646 /* LocationEmptyResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D7C52BC2097C006A0646 /* LocationEmptyResultView.swift */; };
 		A054D7C82BC209A6006A0646 /* LocationResultRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D7C72BC209A6006A0646 /* LocationResultRowView.swift */; };
+		A054D7CA2BC20C71006A0646 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D7C92BC20C71006A0646 /* ErrorView.swift */; };
+		A054D7CC2BC2118A006A0646 /* NetworkErrorVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D7CB2BC2118A006A0646 /* NetworkErrorVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +135,8 @@
 		A054D7C32BC20934006A0646 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		A054D7C52BC2097C006A0646 /* LocationEmptyResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEmptyResultView.swift; sourceTree = "<group>"; };
 		A054D7C72BC209A6006A0646 /* LocationResultRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResultRowView.swift; sourceTree = "<group>"; };
+		A054D7C92BC20C71006A0646 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		A054D7CB2BC2118A006A0646 /* NetworkErrorVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorVO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +365,7 @@
 		A054D7742BC0B077006A0646 /* VO */ = {
 			isa = PBXGroup;
 			children = (
+				A054D7CB2BC2118A006A0646 /* NetworkErrorVO.swift */,
 				A054D7752BC0B11C006A0646 /* WeatherDetailsVO.swift */,
 			);
 			path = VO;
@@ -372,6 +377,7 @@
 				A054D78B2BC0BFF7006A0646 /* LoadingView.swift */,
 				A054D7B92BC1F463006A0646 /* NoConnectionView.swift */,
 				A054D7C02BC2026A006A0646 /* CustomTextFieldStyle.swift */,
+				A054D7C92BC20C71006A0646 /* ErrorView.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -572,6 +578,7 @@
 				A054D79B2BC0D3EA006A0646 /* Unit.swift in Sources */,
 				A054D7A42BC1D7E2006A0646 /* Location.swift in Sources */,
 				A054D7512BC09A04006A0646 /* Request.swift in Sources */,
+				A054D7CC2BC2118A006A0646 /* NetworkErrorVO.swift in Sources */,
 				A054D7872BC0BB16006A0646 /* ServiceInjection.swift in Sources */,
 				A054D7A02BC1C4FF006A0646 /* LocationRepository.swift in Sources */,
 				A054D7BC2BC1F536006A0646 /* ConnectionObserver.swift in Sources */,
@@ -585,6 +592,7 @@
 				A054D71A2BC0980E006A0646 /* WeatherApp.swift in Sources */,
 				A054D7BA2BC1F463006A0646 /* NoConnectionView.swift in Sources */,
 				A054D7852BC0BB0D006A0646 /* RepositoryInjection.swift in Sources */,
+				A054D7CA2BC20C71006A0646 /* ErrorView.swift in Sources */,
 				A054D7C62BC2097C006A0646 /* LocationEmptyResultView.swift in Sources */,
 				A054D7782BC0B49A006A0646 /* APIConstants.swift in Sources */,
 				A054D77C2BC0B7A8006A0646 /* FetchWeatherUseCase.swift in Sources */,

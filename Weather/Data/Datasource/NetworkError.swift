@@ -14,4 +14,21 @@ enum NetworkError: Error, Equatable {
     case unexpected(_ error: String)
     case malformedJSON(_ error: String)
     case serverError(code: Int, error: String)
+    
+    var localizedDescription: String {
+        switch self {
+        case .unauthorized:
+            return "Unauthorized or your API limit has exceed"
+        case let .badURL(error):
+            return error
+        case let .badRequest(error):
+            return error
+        case let .unexpected(error):
+            return error
+        case let .malformedJSON(error):
+            return error
+        case let .serverError(code, error):
+            return "\(error) - Status code: \(code)"
+        }
+    }
 }

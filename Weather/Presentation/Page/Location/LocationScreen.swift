@@ -12,11 +12,12 @@ struct LocationScreen: View {
     let state: LocationViewModel.UIState
     let onSelectCity: (Location) -> Void
     let onSearchCity: (String) -> Void
-    
-    @State private var query = String()
-    
+        
     var body: some View {
         VStack(alignment: .center) {
+            if case let .error(failure) = state.error {
+                ErrorView(failure: failure)
+            }
             LocationSearchView(onSearchCity: onSearchCity)
             if state.isEmptySearch {
                 LocationEmptyResultView()

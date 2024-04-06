@@ -25,7 +25,7 @@ class LocationViewModel: ObservableObject {
         fetchLocationUC.execute(city: query)
             .handleEvents(receiveSubscription: { [weak self] _ in
                 guard let self = self else { return }
-                self.state = self.state.copy(isLoading: true)
+                self.state = self.state.copy(isLoading: true, error: .no)
             }, receiveCancel: { [weak self] in
                 guard let self = self else { return }
                 self.state = self.state.copy(isLoading: false)
@@ -37,7 +37,7 @@ class LocationViewModel: ObservableObject {
                 case .finished:
                     self.state = self.state.copy(isLoading: false)
                 case let .failure(error):
-                    self.state = self.state.copy(isLoading: false, error: error)
+                    self.state = self.state.copy(isLoading: false, error: .error(error))
                 }
             } receiveValue: { [weak self] location in
                 guard let self = self else { return }
