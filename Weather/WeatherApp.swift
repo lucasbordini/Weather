@@ -6,12 +6,27 @@
 //
 
 import SwiftUI
+import Swinject
 
 @main
 struct WeatherApp: App {
+    
+    init() {
+        Injector.resolver = Container()
+            .registerServices()
+            .registerRepositories()
+            .registerUseCases()
+            .registerViewModel()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+    }
+    
+    enum Destination {
+        case Details(city: String)
+        case Search
     }
 }
