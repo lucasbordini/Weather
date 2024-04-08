@@ -12,8 +12,6 @@ struct WeatherDetailsHeaderView: View {
     let city: String
     let weather: String
     
-    let onChangeCity: () -> Void
-    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -28,5 +26,5 @@ struct WeatherDetailsHeaderView: View {
 }
 
 #Preview {
-    WeatherDetailsHeaderView(city: "São Paulo", weather: "Cloud", onChangeCity: {})
+    WeatherDetailsHeaderView(city: "São Paulo", weather: "Cloud")
 }

@@ -58,8 +58,6 @@ class WeatherDetailsViewModel: ObservableObject {
                 self.state = self.state.copy(vo: vo, unit: unit)
             }).store(in: &cancellable)
     }
-    
-    func onChangeCity() {}
 }
 
 

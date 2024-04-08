@@ -25,7 +25,6 @@ struct WeatherDetailsAdapter: View {
         GeometryReader { geo in
             List {
                 WeatherDetailsScreen(state: viewModel.state,
-                                     onChangeCity: viewModel.onChangeCity,
                                      scaleSelected: $viewModel.selectedScale
                 ).frame(width: geo.size.width, height: geo.size.height)
             }

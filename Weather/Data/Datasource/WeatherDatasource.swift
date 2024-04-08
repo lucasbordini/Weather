@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// @mockable
 protocol WeatherDatasource {
     func request<T: Decodable>(_ req: Request) -> AnyPublisher<T, NetworkError>
 }

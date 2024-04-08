@@ -1,6 +1,24 @@
 {
-  "originHash" : "42a85f1a960876b78e5324d82a193444ac5d40ae04a48d3b869645a14c71c2a3",
+  "originHash" : "4afdb7eecf322b48fea0edc58b84eb825a5ae470920f8d07026f9122b4d46afc",
   "pins" : [
+    {
+      "identity" : "combineexpectations",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/groue/CombineExpectations.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "04d4e4b21c9e8361925f03f64a7ecda89ef9974f"
+      }
+    },
+    {
+      "identity" : "mockingbird",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/birdrides/mockingbird",
+      "state" : {
+        "revision" : "6e0d473df6b975719e145f6aebf90990c634700e",
+        "version" : "0.20.0"
+      }
+    },
     {
       "identity" : "reachability.swift",
       "kind" : "remoteSourceControl",
@@ -15,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Swinject/Swinject.git",
       "state" : {
-        "revision" : "463cb2d659c8ae34899d18057ea5b1bb86fc3178",
-        "version" : "2.8.4"
+        "revision" : "13d2d7065253eea1e9ce4d9263cf51c783fdf3f0",
+        "version" : "2.8.5"
       }
     },
     {

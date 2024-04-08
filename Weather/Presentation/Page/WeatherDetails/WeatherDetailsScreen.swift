@@ -9,7 +9,6 @@ import SwiftUI
 struct WeatherDetailsScreen: View {
     
     let state: WeatherDetailsViewModel.UIState
-    let onChangeCity: () -> Void
     @Binding var scaleSelected: Int
     
     var body: some View {
@@ -19,8 +18,7 @@ struct WeatherDetailsScreen: View {
             }
             let vo = state.vo
             WeatherDetailsHeaderView(city: vo?.city ?? "",
-                                     weather: vo?.weather ?? "",
-                                     onChangeCity: onChangeCity)
+                                     weather: vo?.weather ?? "")
             
             WeatherDetailsTempView(image: vo?.image ?? "",
                                    temp: vo?.temp.toString() ?? "",
@@ -48,5 +46,5 @@ struct WeatherDetailsScreen: View {
 }
 
 #Preview {
-    WeatherDetailsScreen(state: .init(isLoading: false, vo: WeatherDetailsVO.init(city: "São Paulo", temp: 38, feels: 36, humidity: 85, weather: "Cloud", weatherDescription: "It's a cloud day outside", windSpeed: 4.79, image: "Clouds")), onChangeCity: {}, scaleSelected: .constant(0))
+    WeatherDetailsScreen(state: .init(isLoading: false, vo: WeatherDetailsVO.init(city: "São Paulo", temp: 38, feels: 36, humidity: 85, weather: "Cloud", weatherDescription: "It's a cloud day outside", windSpeed: 4.79, image: "Clouds")), scaleSelected: .constant(0))
 }
